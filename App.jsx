@@ -185,3 +185,18 @@ function MainDashboard() {
     </div>
   );
 }
+/ ==========================================
+// COMPONENT 3: THE ROOT (STARTING POINT)
+// ==========================================
+export default function App() {
+  return (
+    // The Auth0Provider acts like a security blanket around our whole app.
+    <Auth0Provider
+      domain="dev-kds27ji4tisy6f7h.us.auth0.com"
+      clientId="l3ALaDX6H4yvuKgf6Q0cqOoADBPIl2Yx"
+      authorizationParams={{ redirect_uri: window.location.origin }}
+    >
+      <MainDashboard />
+    </Auth0Provider>
+  );
+}
